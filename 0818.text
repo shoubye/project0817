@@ -1,0 +1,33 @@
+$bloodType[] = 'A';
+$bloodType[] = 'B';
+$bloodType[] = 'AB';
+$bloodType[] = 'O';
+
+
+// print_r($bloodType);
+
+// var_dump($bloodType);
+
+for ($i = 0; $i <= 3; $i++) {
+	echo $bloodType[$i] . "<br />";
+}
+-----------------------------------------------------------
+
+//1,2,3,5,6                         //6,5,3,2,1
+//$a - $b 由低到高                   //$b - $a 由高到低
+function cmp($a, $b)               function cmp($a, $b)
+{                                  {
+   return $a - $b;                     return $b - $a;
+}                                  }
+
+
+$a = array(3, 2, 5, 6, 1);
+usort($a, "cmp");
+
+foreach ($a as $key => $value) {
+    echo "$key: $value <br>";
+}
+-----------------------------------------------------------
+
+
+
